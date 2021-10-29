@@ -16,8 +16,6 @@ to display it in the App with the information of the beer!
 Using the plataform of react I build some backgorund and Front-End to show information about beers, using an API.
 The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
 
-If you use Expo, you don't need to install vector icons. But if you have a babel.config.js or .babelrc file, make sure that it includes babel-preset-expo.
-https://callstack.github.io/react-native-paper/card.html
 
 ## Hooks for get the Data of the API that display the beer
 
