@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
+import LinesEllipsis from "react-lines-ellipsis";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
-//import StarsIcon from "@material-ui/icons/Stars";
+//import StarIcon from '@mui/icons-material/Star';
+//import StarIcon from "@material-ui/icons/Star";
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
 
@@ -12,8 +14,7 @@ export const ItemCard = ({ beer }) => {
       <Link to={`/movie/${beer.id}`}></Link>
       <div className="poster-wrappers1">
         <button className="btn2"
-        onClick={() => removeFromfavourite(beer.id)}
-        >  
+         onClick={() => removeFromfavourite(beer.id)}>  
         </button>
 
         <div>
@@ -30,7 +31,7 @@ export const ItemCard = ({ beer }) => {
         <div className="title">
           <h3>{beer.name}</h3>
 
-          <li
+          <LinesEllipsis
             text={beer.description}
             maxLine="3"
             ellipsis="..."

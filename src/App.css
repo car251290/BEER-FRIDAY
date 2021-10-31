@@ -3,7 +3,7 @@
 :root {
   --primary: #ffd000;
   --secondary: 	#003cff;
-  --white: #ffd000;;
+  --Yellow: #ffd000;;
 }
 
 body {
@@ -123,6 +123,7 @@ header .nav-links li:last-child {
   padding: 50px 0;
   max-width: 600px;
   margin: 0 auto;
+ 
 }
 
 .add-content .input-wrapper input {
@@ -134,7 +135,7 @@ header .nav-links li:last-child {
   color: var(--white);
   font-size: 1.25rem;
 }
-
+/* Results of the card */
 .results {
   padding: 0;
   margin: 0;
@@ -154,7 +155,7 @@ header .nav-links li:last-child {
 .filler-poster {
   width: 75px;
   height: 113px;
-  background-color: #dbdada;
+  background-color: #e0dd20;
   border-radius: 5px;
   margin-right: 15px;
   display: block;
@@ -271,7 +272,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn {
-  color: #fefefe;
+  color: #1258db;
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
@@ -286,7 +287,7 @@ header .nav-links li:last-child {
 }
 
 .movie-page .no-movies {
-  color: #c4c4c4;
+  color: #dd791c;
   font-size: 3rem;
   text-align: center;
 }

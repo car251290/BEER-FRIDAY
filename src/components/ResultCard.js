@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
-//import LinesEllipsis from "react-lines-ellipsis";
+import LinesEllipsis from "react-lines-ellipsis";
 //import StarsIcon from "@material-ui/icons/Stars";
 
 export const ResultCard = ({ beer }) => {
@@ -22,11 +22,13 @@ export const ResultCard = ({ beer }) => {
           className="btn1"
           disabled={watchedDisabled}
           onClick={() => addItemToFavouriteList(beer)}
-        >
-          
-            className={colorClass}
-            onClick={() => setColorClass("activecolor")}
-          
+        >  
+        <button
+           className={colorClass}
+           onClick={() => setColorClass("activecolor")}
+          >
+          </button>
+
         </button>
 
         <div>
@@ -43,7 +45,7 @@ export const ResultCard = ({ beer }) => {
         <div className="title">
           <h3>{beer.name}</h3>
 
-          <li
+          <LinesEllipsis
             text={beer.description}
             maxLine="3"
             ellipsis="..."

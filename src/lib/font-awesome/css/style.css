@@ -67,13 +67,13 @@
     color:#032541;
 }
 .activecolor{
-    color: green;
+    color: rgb(0, 60, 128);
     font-weight: 900;
     font-size: 20px;
 }
 .btn2{
     background-color: none;
-    color:green;
+    color:rgb(0, 55, 128);
     position:absolute;
     right:20px;
     top:10px;
@@ -98,12 +98,12 @@ a{
   height: 45px;
   border-radius:4px;
   background-color: #032541;
-  color: white;
+  color: rgb(216, 230, 24);
 }
 ::placeholder{
     padding:30px;
     background-color: #032541;
-    color: white;
+    color: rgb(196, 193, 31);
 }
 
 

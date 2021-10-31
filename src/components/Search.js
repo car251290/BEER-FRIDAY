@@ -7,7 +7,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
-
+//useEffect to fetch the data
   useEffect(() => {
     fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=60`)
       .then((res) => res.json())
@@ -24,7 +24,7 @@ const Search = () => {
 
     setQuery(e.target.value);
   },[]);
-
+//fetch of the data
   const handleClick = () => {
     fetch(`https://api.punkapi.com/v2/beers?beer_name=${query}`)
       .then((res) => res.json())
@@ -50,16 +50,14 @@ const Search = () => {
           value={query}
           onChange={onChange}
         />
-
         <div>
           <button
             type="button"
             onClick={handleClick}
             className="btn btn-success"
           >
-          
             <span id="btn-success" className="btn4">
-              Search
+              Search for a beer 
             </span>
           </button>
         </div>
