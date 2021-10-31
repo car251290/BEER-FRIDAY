@@ -6,11 +6,12 @@ import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
 //import StarIcon from '@mui/icons-material/Star';
 //import StarIcon from "@material-ui/icons/Star";
+import { Card} from '@material-ui/core';
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
 
   return (
-    <div className="result-card">
+    <Card className="result-card">
       <Link to={`/movie/${beer.id}`}></Link>
       <div className="poster-wrappers1">
         <button className="btn2"
@@ -40,6 +41,6 @@ export const ItemCard = ({ beer }) => {
           />
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

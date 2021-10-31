@@ -59,7 +59,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #1aa762;
+  background-color: #a71a3d;
   opacity: 1;
   cursor: pointer;
 }
@@ -149,6 +149,7 @@ header .nav-links li:last-child {
 .result-card {
   display: flex;
   margin-bottom: 20px;
+  background-color:#EC9D00;
 }
 
 .result-card .poster-wrapper img,
@@ -235,7 +236,7 @@ header .nav-links li:last-child {
 }
 
 .movie-card img {
-  width: 100%;
+  width: 110%;
   display: block;
 }
 

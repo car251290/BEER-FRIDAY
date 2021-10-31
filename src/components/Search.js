@@ -1,7 +1,9 @@
 import React, { useState, useEffect,useCallback } from "react";
 import { ResultCard } from "./ResultCard";
 import "../lib/font-awesome/css/style.css";
-//import SearchIcon from "@material-ui/icons/Search";
+//import IconButton from '@mui/material/IconButton';
+//import SearchIcon from '@mui/icons-material/Search';
+
 import InfiniteScroll from "react-infinite-scroll-component";
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -55,7 +57,7 @@ const Search = () => {
             type="button"
             onClick={handleClick}
             className="btn btn-success"
-          >
+          > 
             <span id="btn-success" className="btn4">
               Search for a beer 
             </span>

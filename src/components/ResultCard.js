@@ -4,7 +4,7 @@ import { GlobalContext } from "../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 import LinesEllipsis from "react-lines-ellipsis";
 //import StarsIcon from "@material-ui/icons/Stars";
-
+import { Card,Button} from '@material-ui/core';
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
@@ -15,19 +15,19 @@ export const ResultCard = ({ beer }) => {
   
 
   return (
-    <div className="result-card">
+    <Card className="result-card">
       <Link to={`/movie/${beer.id}`}></Link>
       <div className="poster-wrappers1">
         <button
           className="btn1"
           disabled={watchedDisabled}
-          onClick={() => addItemToFavouriteList(beer)}
+          onClick={ () => addItemToFavouriteList(beer)}
         >  
-        <button
+        <Button
            className={colorClass}
            onClick={() => setColorClass("activecolor")}
           >
-          </button>
+          </Button>
 
         </button>
 
@@ -54,6 +54,6 @@ export const ResultCard = ({ beer }) => {
           />
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
