@@ -21,8 +21,7 @@ export const ResultCard = ({ beer }) => {
           disabled={watchedDisabled}
           onClick={ () => addItemToFavouriteList(beer)}
         >  
-        <Button 
-        
+        <Button variant="contained"
            className={colorClass}
            onClick={() => setColorClass("activecolor")}
           >
