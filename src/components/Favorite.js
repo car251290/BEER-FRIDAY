@@ -19,7 +19,7 @@ const Favorite = () => {
             ))}
           </div>
         ) : (
-          <h2 className="no-movies">No Beer in your list! Add your some favourite Beers!</h2>
+          <h2 className="no-movies">No Beer in your list! Add your favourite Beers!</h2>
         )}
       </div>
     </div>
