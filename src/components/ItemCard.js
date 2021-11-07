@@ -11,11 +11,12 @@ export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
 
   return (
-    <Card sx={{ maxWidth: 345 }} className="result-card">
+    <Card style={{backgroundColor: "white"}} sx={{ maxWidth: 345 }} className="result-card">
       <Link to={`/movie/${beer.id}`}></Link>
       <div className="poster-wrappers1">
         <button className="btn2"
          onClick={() => removeFromfavourite(beer.id)}>  
+         Remove the beer
         </button>
         <div>
           {beer.image_url ? (
