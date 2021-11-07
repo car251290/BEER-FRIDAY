@@ -4,7 +4,7 @@ import { GlobalContext } from "../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 import LinesEllipsis from "react-lines-ellipsis";
 //import StarsIcon from "@material-ui/icons/Stars";
-import { Card,Button} from '@material-ui/core';
+import { Card,Button, CardContent} from '@material-ui/core';
 
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
@@ -13,7 +13,7 @@ export const ResultCard = ({ beer }) => {
   const watchedDisabled = storedItemWatched ? true : false;
   
   return (
-    <Card  sx={{ maxWidth: 345 }}  style={{backgroundColor: "#dd791c"}} className="result-card">
+    <Card  sx={{ maxWidth: 345 }}  style={{backgroundColor: "white"}} className="result-card">
       <Link to={`/movie/${beer.id}`}></Link>
       <div className="poster-wrappers1">
         <button
@@ -21,15 +21,13 @@ export const ResultCard = ({ beer }) => {
           disabled={watchedDisabled}
           onClick={ () => addItemToFavouriteList(beer)}
         >  
-        <Button variant="contained"
+         <Button variant="contained"
            className={colorClass}
            onClick={() => setColorClass("activecolor")}
           >
             Favorite beer
           </Button>
-
         </button>
-
         <div>
           {beer.image_url ? (
             <img
