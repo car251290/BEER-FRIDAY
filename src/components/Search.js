@@ -3,9 +3,10 @@ import { ResultCard } from "./ResultCard";
 import "../lib/font-awesome/css/style.css";
 //import IconButton from '@mui/material/IconButton';
 //import SearchIcon from '@mui/icons-material/Search';
-
+import SearchBar from "material-ui-search-bar";
 import InfiniteScroll from "react-infinite-scroll-component";
 const Search = () => {
+  //use of the state
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
@@ -15,7 +16,7 @@ const Search = () => {
       .then((res) => res.json())
       .then((data) => {
         if (!data.errors) {
-          setResults((d) => [...d, ...data]);
+          setResults((b) => [...b, ...data]);
         } else {
           setResults([]);
         }
