@@ -18,11 +18,7 @@ export const Header = () => {
                 <FavoriteSharpIcon className="faviort-icon" />
               </Link>
             </Button>
-            <li>
-              <h2 to="/reactjs-beer-lovers" className="btn btn-main">
-                Home
-              </h2>
-            </li>
+           
           </ul>
         </div>
       </div>
