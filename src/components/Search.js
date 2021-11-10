@@ -1,5 +1,5 @@
 import React, { useState, useEffect,useCallback } from "react";
-import { ResultCard } from "./ResultCard";
+import { ResultCard } from "../ResultCard/ResultCard";
 import "../lib/font-awesome/css/style.css";
 //import IconButton from '@mui/material/IconButton';
 //import SearchIcon from '@mui/icons-material/Search';
@@ -59,6 +59,8 @@ const Search = () => {
             onClick={handleClick}
             className="btn btn-success"
           > 
+          <SearchBar/>
+          
             <span id="btn-success" className="btn4">
               Search for a beer 
             </span>
