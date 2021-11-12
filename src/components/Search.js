@@ -46,6 +46,15 @@ const Search = () => {
   return (
     <div>
       <div className="input-wrapper">
+      <SearchBar
+          type="text"
+           value={query}
+           onChange={(onChange)}
+           style={{
+            margin: '0 auto',
+            maxWidth: 600,
+          }}
+          />
         <input
           className="input2"
           type="text"
