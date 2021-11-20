@@ -22,7 +22,7 @@ const Search = () => {
         }
       });
   }, [page]);
-  const onChange = useCallback((e) => {
+const onChange = useCallback((e) => {
     e.preventDefault();
 
     setQuery(e.target.value);
@@ -46,7 +46,7 @@ const Search = () => {
   return (
     <div>
       <div className="input-wrapper">
-      <SearchBar
+         <SearchBar
           type="text"
            value={query}
            onChange={(onChange)}
@@ -55,25 +55,17 @@ const Search = () => {
             maxWidth: 600,
           }}
           />
-        <input
-          className="input2"
-          type="text"
-          placeholder="Search for Beer"
-          value={query}
-          onChange={onChange}
-        />
         <div>
           <button
             type="button"
             onClick={handleClick}
             className="btn btn-success"
           > 
-          <SearchBar/>
-          
             <span id="btn-success" className="btn4">
               Search for a beer 
             </span>
           </button>
+
         </div>
       </div>
       <InfiniteScroll dataLength={results.length} next={next} hasMore={true}>
