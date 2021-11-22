@@ -27,7 +27,7 @@ const onChange = useCallback((e) => {
 
     setQuery(e.target.value);
   },[]);
-//fetch of the data
+// for get the beer data of the search
   const handleClick = () => {
     fetch(`https://api.punkapi.com/v2/beers?beer_name=${query}`)
       .then((res) => res.json())
@@ -39,7 +39,7 @@ const onChange = useCallback((e) => {
         }
       });
   };
-
+// for geeting to the favorite page of the beer
   const next = () => {
     setPage((page) => page + 1);
   };
@@ -49,10 +49,11 @@ const onChange = useCallback((e) => {
          <SearchBar
           type="text"
            value={query}
-           onChange={(onChange)}
+           onChange={ () => console.log(onChange)}
            style={{
             margin: '0 auto',
-            maxWidth: 600,
+            maxWidth: 800,
+            
           }}
           />
         <div>
