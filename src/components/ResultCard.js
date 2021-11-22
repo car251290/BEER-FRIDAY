@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 import LinesEllipsis from "react-lines-ellipsis";
 //import StarsIcon from "@material-ui/icons/Stars";
-import { Card,Button, CardContent} from '@material-ui/core';
+import { Card,Button, CardContent, Typography} from '@material-ui/core';
 
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
@@ -41,16 +41,15 @@ export const ResultCard = ({ beer }) => {
         </div>
         <div className="title">
           <h3>{beer.name}</h3>
-
-          <LinesEllipsis
-            text={beer.description}
-            maxLine="3"
-            ellipsis="..."
-            trimRight
-            basedOn="letters"
-          />
+       
+            <Typography variant="body3" color="text.secondary" mt={2}>
+              <text>{beer.description}</text>
+            </Typography>
+            
+        
         </div>
       </div>
+      
     </Card>
   );
 };
