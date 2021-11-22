@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import LinesEllipsis from "react-lines-ellipsis";
 import { Link } from "react-router-dom";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
 //import StarIcon from '@mui/icons-material/Star';
 //import StarIcon from "@material-ui/icons/Star";
 import { Card,CardContent,Typography,CardMedia} from '@material-ui/core';
+
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
 
@@ -18,6 +19,7 @@ export const ItemCard = ({ beer }) => {
          onClick={() => removeFromfavourite(beer.id)}>  
          Remove the beer
         </button>
+        
         <div>
           {beer.image_url ? (
             <img
@@ -33,13 +35,9 @@ export const ItemCard = ({ beer }) => {
         <div className="title">
           <h3>{beer.name}</h3>
 
-          <LinesEllipsis
-            text={beer.description}
-            maxLine="3"
-            ellipsis="..."
-            trimRight
-            basedOn="letters"
-          />
+          <Typography variant="body3" color="text.secondary" mt={2}>
+              <text>{beer.description}</text>
+            </Typography>
         </div>
       </div>
     </Card>
