@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
-//import StarsIcon from "@material-ui/icons/Stars";
-import { Card,Button, CardContent, Typography} from '@material-ui/core';
+import StarsIcon from "@material-ui/icons/Stars";
+import { Card,Button, CardContent, Typography,ImageListItem} from '@material-ui/core';
 //import AddIcon from '@mui/icons-material/Add';
-import SportsBarIcon from '@mui/icons-material/SportsBar';
+//import SportsBarIcon from '@mui/icons-material/SportsBar';
+//import GradeTwoToneIcon from '@mui/icons-material/GradeTwoTone';
+//import FavoriteBorderTwoToneIcon from '@mui/icons-material/FavoriteBorderTwoTone';
+
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
@@ -24,24 +27,32 @@ export const ResultCard = ({ beer }) => {
           onClick={ () => addItemToFavouriteList(beer)}
         >  
 
-         <SportsBarIcon variant="contained"
+         <StarsIcon variant="contained"
            className={colorClass}
            onClick={() => setColorClass("activecolor")}
           >
-          </SportsBarIcon>
+          </StarsIcon>
+
         </button>
 
 
         <div>
           {beer.image_url ? (
+            <ImageListItem 
+            sx={{ width: 500, height: 450 }}
+            variant="quilted"
+            rowHeight={121}
+            >
             <img
               className="poster1"
               src={beer.image_url}
               alt={`${beer.name} Poster`}
             />
+             </ImageListItem>
           ) : (
             <div className="filler-poster" />
           )}
+          
         </div>
         <div className="title">
           <h3>{beer.name}</h3>
