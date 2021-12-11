@@ -53,7 +53,6 @@ const onChange = useCallback((e) => {
            style={{
             margin: '0 auto',
             maxWidth: 800,
-            
           }}
           />
         <div>
