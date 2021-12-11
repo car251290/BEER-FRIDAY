@@ -6,7 +6,7 @@ import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
 //import StarIcon from '@mui/icons-material/Star';
 //import StarIcon from "@material-ui/icons/Star";
-import { Card,CardContent,Typography,CardMedia} from '@material-ui/core';
+import { Card,CardContent,Typography,CardMedia,ImageListItem,ImageList} from '@material-ui/core';
 
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
@@ -20,24 +20,35 @@ export const ItemCard = ({ beer }) => {
          Remove the beer
         </button>
         
-        <div>
+        <ImageList
+         sx={{ width: 500, height: 450 }}
+         variant="quilted"
+         cols={4}
+         rowHeight={121}
+        >
           {beer.image_url ? (
+              <ImageListItem 
+              sx={{ width: 500, height: 450 }}
+               variant="quilted"
+              rowHeight={121}
+              >
             <img
               className="poster1"
               src={beer.image_url}
               alt={`${beer.name} Poster`}
             /> 
+            </ImageListItem>
           ) : (
             <div className="filler-poster" />
           )}
-          
-        </div>
+          </ImageList>
         <div className="title">
           <h3>{beer.name}</h3>
-
-          <Typography variant="body3" color="text.secondary" mt={2}>
+          <CardContent>
+          <Typography variant="body2" color="text.secondary" mt={2}>
               <text>{beer.description}</text>
             </Typography>
+            </CardContent>
         </div>
       </div>
     </Card>
