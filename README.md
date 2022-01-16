@@ -25,6 +25,7 @@ We’ll discuss this more in Using the Effect Hook.
 ## Technologies 
 * Node.js
 * JavaScript
+* React
 * Material UI
 * HTML & CSS
 * MongoDB
