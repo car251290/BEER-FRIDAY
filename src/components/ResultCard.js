@@ -58,7 +58,7 @@ export const ResultCard = ({ beer }) => {
           <h3>{beer.name}</h3>
 
           <CardContent>
-            <Typography paragraph variant="body2"color="text.secondary" mt={2}>
+            <Typography paragraph display="block" variant="caption"color="text.secondary" mt={2}>
               <text>{beer.description}</text>
             </Typography>
             </CardContent>
