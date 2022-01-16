@@ -5,10 +5,7 @@ import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
 import StarsIcon from "@material-ui/icons/Stars";
 import { Card,Button, CardContent, Typography,ImageListItem} from '@material-ui/core';
-//import AddIcon from '@mui/icons-material/Add';
-//import SportsBarIcon from '@mui/icons-material/SportsBar';
-//import GradeTwoToneIcon from '@mui/icons-material/GradeTwoTone';
-//import FavoriteBorderTwoToneIcon from '@mui/icons-material/FavoriteBorderTwoTone';
+
 
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
