@@ -3,9 +3,7 @@ import LinesEllipsis from "react-lines-ellipsis";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
-//import LinesEllipsis from "react-lines-ellipsis";
-//import StarIcon from '@mui/icons-material/Star';
-//import StarIcon from "@material-ui/icons/Star";
+
 import { Card,CardContent,Typography,CardMedia,ImageListItem,ImageList} from '@material-ui/core';
 
 export const ItemCard = ({ beer }) => {
@@ -45,7 +43,7 @@ export const ItemCard = ({ beer }) => {
         <div className="title">
           <h3>{beer.name}</h3>
           <CardContent>
-          <Typography variant="body2" color="text.secondary" mt={2}>
+          <Typography display="block" variant="caption" color="text.secondary" mt={2}>
               <text>{beer.description}</text>
             </Typography>
             </CardContent>
