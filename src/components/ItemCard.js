@@ -7,7 +7,6 @@ import { Card,CardContent,Typography,CardMedia,ImageListItem,ImageList} from '@m
 
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
-
   return (
     <Card style={{backgroundColor: "white"}} sx={{ maxWidth: 345 }} className="result-card">
       <Link to={`/movie/${beer.id}`}></Link>
@@ -16,29 +15,22 @@ export const ItemCard = ({ beer }) => {
          onClick={() => removeFromfavourite(beer.id)}>  
          Remove the beer
         </button>
-        
-       
           {beer.image_url ? (
-             
             <img
               className="poster1"
               src={beer.image_url}
               alt={`${beer.name} Poster`}
             /> 
-           
           ) : (
             <div className="filler-poster" />
           )}
-         
         <div className="title">
           <h3>{beer.name}</h3>
-         
            <CardContent>
           <Typography display="block" variant="caption" color="text.secondary" mt={2}>
               <text>{beer.description}</text>
             </Typography>
             </CardContent>
-          
         </div>
       </div>
     </Card>
