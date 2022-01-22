@@ -6,7 +6,6 @@ import "../lib/font-awesome/css/style.css";
 import StarsIcon from "@material-ui/icons/Stars";
 import { Card,Button, CardContent, Typography,ImageListItem} from '@material-ui/core';
 
-
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
@@ -35,17 +34,13 @@ export const ResultCard = ({ beer }) => {
 
         <div>
           {beer.image_url ? (
-            <ImageListItem 
-            sx={{ width: 500, height: 450 }}
-            variant="quilted"
-            rowHeight={121}
-            >
+           
             <img
               className="poster1"
               src={beer.image_url}
               alt={`${beer.name} Poster`}
             />
-             </ImageListItem>
+             
           ) : (
             <div className="filler-poster" />
           )}
