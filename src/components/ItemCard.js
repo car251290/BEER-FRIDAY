@@ -3,7 +3,6 @@ import LinesEllipsis from "react-lines-ellipsis";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
-
 import { Card,CardContent,Typography,CardMedia,ImageListItem,ImageList} from '@material-ui/core';
 
 export const ItemCard = ({ beer }) => {
@@ -18,35 +17,28 @@ export const ItemCard = ({ beer }) => {
          Remove the beer
         </button>
         
-        <ImageList
-         sx={{ width: 500, height: 450 }}
-         variant="quilted"
-         cols={4}
-         rowHeight={121}
-        >
+       
           {beer.image_url ? (
-              <ImageListItem 
-              sx={{ width: 500, height: 450 }}
-               variant="quilted"
-              rowHeight={121}
-              >
+             
             <img
               className="poster1"
               src={beer.image_url}
               alt={`${beer.name} Poster`}
             /> 
-            </ImageListItem>
+           
           ) : (
             <div className="filler-poster" />
           )}
-          </ImageList>
+         
         <div className="title">
           <h3>{beer.name}</h3>
-          <CardContent>
+         
+           <CardContent>
           <Typography display="block" variant="caption" color="text.secondary" mt={2}>
               <text>{beer.description}</text>
             </Typography>
             </CardContent>
+          
         </div>
       </div>
     </Card>
