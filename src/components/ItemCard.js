@@ -9,9 +9,8 @@ export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
 
   return (
-    <Card style={{backgroundColor: "white"}} sx={{ maxWidth: 345 }} className="result-card">
+    <Card style={{backgroundColor: "white"}} sx={{ minWidth: 200 }} className="result-card">
       <Link to={`${beer.id}`}></Link>
-      <div className="poster-wrappers1">
         <button className="btn2"
          onClick={() => removeFromfavourite(beer.id)}>  
          Remove the beer
@@ -34,7 +33,7 @@ export const ItemCard = ({ beer }) => {
             </Typography>
             </CardContent>
         </div>
-      </div>
+     
     </Card>
   );
 };
