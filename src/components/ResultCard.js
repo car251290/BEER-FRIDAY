@@ -4,7 +4,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
 import StarsIcon from "@material-ui/icons/Stars";
-import { Card,Button, CardContent, Typography,ImageListItem} from '@material-ui/core';
+import { Card,CardContent, Typography,} from '@material-ui/core';
 
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
@@ -14,7 +14,7 @@ export const ResultCard = ({ beer }) => {
   
   return (
     <Card  sx={{ maxWidth: 345 }}  style={{backgroundColor: "white"}} className="result-card">
-      <Link to={`/movie/${beer.id}`}></Link>
+      <Link to={`${beer.id}`}></Link>
 
       <div className="poster-wrappers1">
         <button
@@ -22,7 +22,6 @@ export const ResultCard = ({ beer }) => {
           disabled={watchedDisabled}
           onClick={ () => addItemToFavouriteList(beer)}
         >  
-
          <StarsIcon variant="contained"
            className={colorClass}
            onClick={() => setColorClass("activecolor")}
@@ -30,17 +29,14 @@ export const ResultCard = ({ beer }) => {
           </StarsIcon>
 
         </button>
-
-
         <div>
           {beer.image_url ? (
-           
             <img
+            height="100%" width="100%"
               className="poster1"
               src={beer.image_url}
               alt={`${beer.name} Poster`}
-            />
-             
+            /> 
           ) : (
             <div className="filler-poster" />
           )}
@@ -48,7 +44,6 @@ export const ResultCard = ({ beer }) => {
         </div>
         <div className="title">
           <h3>{beer.name}</h3>
-
           <CardContent>
             <Typography paragraph display="block" variant="caption"color="text.secondary" mt={2}>
               <text>{beer.description}</text>
