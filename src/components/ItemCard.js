@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import LinesEllipsis from "react-lines-ellipsis";
+//import LinesEllipsis from "react-lines-ellipsis";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
-import { Card,CardContent,Typography,CardMedia,ImageListItem,ImageList} from '@material-ui/core';
+import { Card,CardContent,Typography,CardMedia} from '@material-ui/core';
 
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
