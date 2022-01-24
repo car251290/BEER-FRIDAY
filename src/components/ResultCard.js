@@ -9,7 +9,7 @@ import { Card,CardContent, Typography,} from '@material-ui/core';
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
-  let storedItemWatched = favourite.find((o) => o.id === beer.id);
+  const storedItemWatched = favourite.find((o) => o.id === beer.id);
   const watchedDisabled = storedItemWatched ? true : false;
   
   return (
