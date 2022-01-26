@@ -8,17 +8,12 @@ export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
 
   return (
-    <Card style={{backgroundColor: "white"}} sx={{ minWidth: 200 }} className="result-card">
+    <Card sx={{ maxWidth: 345 }}  style={{backgroundColor: "white"}} className="result-card">
       <Link to={`${beer.id}`}></Link>
 
-        <button className="btn2"
-         onClick={() => removeFromfavourite(beer.id)}>  
-         Remove the beer
-        </button>
-     
-        <CardContent>
-
-          {beer.image_url ? (
+     <CardContent>
+        <CardMedia height="140">
+        {beer.image_url ? (
             <img
             height="100%" width="100%"
               className="poster1"
@@ -30,13 +25,18 @@ export const ItemCard = ({ beer }) => {
           )}
        
           <h3>{beer.name}</h3>
-          <Scrollbar>
+        </CardMedia>
+        <Scrollbar style={{ width: 250, height: 250 }}>
           <Typography display="block" variant="caption" color="text.secondary" mt={2}>
               <text>{beer.description}</text>
-            </Typography>
-          </Scrollbar>
-            </CardContent>
-          
-    </Card>
+          </Typography>
+        </Scrollbar>
+    
+          <button className="btn2"
+         onClick={() => removeFromfavourite(beer.id)}>  
+         Remove the beer
+        </button>
+      </CardContent>
+  </Card>
   );
 };
