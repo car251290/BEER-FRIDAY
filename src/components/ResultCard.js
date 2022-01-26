@@ -4,12 +4,10 @@ import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 //import LinesEllipsis from "react-lines-ellipsis";
 import StarsIcon from "@material-ui/icons/Stars";
-import { Card,CardActions,CardContent, CardMedia, IconButton, Typography,} from '@material-ui/core';
+import { Card,CardActions,CardContent, CardMedia, Typography,} from '@material-ui/core';
 import { Scrollbar } from "react-scrollbars-custom";
-//import { styled } from '@mui/material/styles';
-//import Collapse from '@mui/material/Collapse';
-//import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+//import Button from '@mui/material/Button';
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
@@ -17,6 +15,7 @@ export const ResultCard = ({ beer }) => {
   const watchedDisabled = storedItemWatched ? true : false;
  
   return (
+  
     <Card  sx={{ maxWidth: 345 }}  style={{backgroundColor: "white"}} className="result-card">
       <Link to={`${beer.id}`}></Link>
       <CardContent>
@@ -34,7 +33,7 @@ export const ResultCard = ({ beer }) => {
           <h3>{beer.name}</h3>
           </CardMedia>
           <Scrollbar style={{ width: 250, height: 250 }}>
-          <Typography paragraph display="block" variant="caption"color="text.secondary" mt={2}>
+          <Typography display="block" variant="caption" color="text.secondary" mt={2}>
               <text>{beer.description}</text>
             </Typography>
            </Scrollbar>
@@ -51,6 +50,9 @@ export const ResultCard = ({ beer }) => {
           </StarsIcon>
         </button>
       </CardContent>
+      <CardActions>
+        <button size="small">Learn More </button>
+      </CardActions>
     </Card>
   );
 };
