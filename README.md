@@ -23,10 +23,9 @@ To solve this, Hooks let you split one component into smaller functions based on
 We’ll discuss this more in Using the Effect Hook.
 
 ## Technologies 
-* Node.js
 * JavaScript
 * React
 * Material UI
 * HTML & CSS
-* MongoDB
-* Express
+
+
