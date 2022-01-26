@@ -2,12 +2,10 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
-//import LinesEllipsis from "react-lines-ellipsis";
 import StarsIcon from "@material-ui/icons/Stars";
 import { Card,CardActions,CardContent, CardMedia, Typography,} from '@material-ui/core';
 import { Scrollbar } from "react-scrollbars-custom";
 
-//import Button from '@mui/material/Button';
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
@@ -45,7 +43,7 @@ export const ResultCard = ({ beer }) => {
          <StarsIcon variant="contained"
            className={colorClass}
            onClick={() => setColorClass("activecolor")}
-           //onClick={ () => addItemToFavouriteList(beer)}
+          
           >
           </StarsIcon>
         </button>
