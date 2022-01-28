@@ -6,13 +6,16 @@ import "../lib/font-awesome/css/style.css";
 import StarsIcon from "@material-ui/icons/Stars";
 import { Card,CardActions,CardContent, CardMedia, Typography,} from '@material-ui/core';
 import { Scrollbar } from "react-scrollbars-custom";
-
+import Collapse from 'react-bootstrap/Collapse'
+import Button from 'react-bootstrap/Button'
+import Fade from 'react-bootstrap/Fade'
+//import {Collapse} from 'react-collapse';
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
   const storedItemWatched = favourite.find((o) => o.id === beer.id);
   const watchedDisabled = storedItemWatched ? true : false;
-  const [expanded, setExpanded] = useState(false);
+  const [open, setOpen] = useState(false);
 
   //const handleExpandClick = () => {
   //  setExpanded(!expanded);
@@ -36,11 +39,7 @@ export const ResultCard = ({ beer }) => {
             <div className="filler-poster" />
           )}
           <h3>{beer.name}</h3>
-          <Scrollbar style={{ width: 250, height: 250 }}>
-          <Typography  display="block" variant="caption" color="text.secondary" mt={2}>
-              <text >{beer.description}</text>
-            </Typography>
-           </Scrollbar>
+          
           </CardMedia>
           
            <button    
@@ -54,12 +53,25 @@ export const ResultCard = ({ beer }) => {
           >
           </StarsIcon>
         </button>
+
+     
       </CardContent>
       <CardActions>
-        <button 
-        className={expanded}
-        onClick= {()=> handleExpandClick("")}
-        size="small">Learn More </button>
+      <Button
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+          Learn More 
+        </Button>
+        <Collapse in={open}>
+        <div id="example-collapse-text">
+        <Typography  display="block" variant="caption" color="text.secondary" mt={2}>
+              <text >{beer.description}</text>
+            </Typography>
+        </div>
+      </Collapse>
+
       </CardActions>
     </Card>
   );
