@@ -17,11 +17,6 @@ export const ResultCard = ({ beer }) => {
   const watchedDisabled = storedItemWatched ? true : false;
   const [open, setOpen] = useState(false);
 
-  //const handleExpandClick = () => {
-  //  setExpanded(!expanded);
-  //};
-
-
   return (
   
     <Card  sx={{ maxWidth: 345 }}  style={{backgroundColor: "white"}} className="result-card">
@@ -47,7 +42,7 @@ export const ResultCard = ({ beer }) => {
           onClick={ () => addItemToFavouriteList(beer)}
         >  
          <StarsIcon variant="contained"
-           className={colorClass}
+          className={colorClass}
            onClick={() => setColorClass("activecolor")}
           
           >
@@ -66,9 +61,11 @@ export const ResultCard = ({ beer }) => {
         </Button>
         <Collapse in={open}>
         <div id="example-collapse-text">
+        <Scrollbar style={{ width: 250, height: 250 }}>
         <Typography  display="block" variant="caption" color="text.secondary" mt={2}>
               <text >{beer.description}</text>
             </Typography>
+        </Scrollbar>
         </div>
       </Collapse>
 
