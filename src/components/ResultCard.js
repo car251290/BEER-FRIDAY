@@ -2,14 +2,13 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
-//import LinesEllipsis from "react-lines-ellipsis";
 import StarsIcon from "@material-ui/icons/Stars";
 import { Card,CardActions,CardContent, CardMedia, Typography,} from '@material-ui/core';
 import { Scrollbar } from "react-scrollbars-custom";
 import Collapse from 'react-bootstrap/Collapse'
 import Button from 'react-bootstrap/Button'
-import Fade from 'react-bootstrap/Fade'
-//import {Collapse} from 'react-collapse';
+
+
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
@@ -48,9 +47,8 @@ export const ResultCard = ({ beer }) => {
           >
           </StarsIcon>
         </button>
-
-     
       </CardContent>
+
       <CardActions>
       <Button
         onClick={() => setOpen(!open)}
@@ -59,6 +57,7 @@ export const ResultCard = ({ beer }) => {
       >
           Learn More 
         </Button>
+
         <Collapse in={open}>
         <div id="example-collapse-text">
         <Scrollbar style={{ width: 250, height: 250 }}>
@@ -70,6 +69,7 @@ export const ResultCard = ({ beer }) => {
       </Collapse>
 
       </CardActions>
+      
     </Card>
   );
 };
