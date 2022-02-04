@@ -6,11 +6,14 @@ import { Card,CardContent,Typography,CardMedia,CardActions} from '@material-ui/c
 import { Scrollbar } from "react-scrollbars-custom";
 import Collapse from 'react-bootstrap/Collapse'
 import Button from 'react-bootstrap/Button'
+import useStyles from './style';
+
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
   const [open, setOpen] = useState(false);
-
+  const classes = useStyles();
   return (
+    <div className={classes.container}> 
     <Card sx={{ maxWidth: 345 }}  style={{backgroundColor: "white"}} className="result-card">
       <Link to={`${beer.id}`}></Link>
 
@@ -56,6 +59,7 @@ export const ItemCard = ({ beer }) => {
       </CardActions>
 
       </CardContent>
-  </Card>
+   </Card>
+  </div>
   );
 };
