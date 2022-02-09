@@ -1,8 +1,6 @@
 import React, { useState, useEffect,useCallback } from "react";
 import { ResultCard } from "../ResultCard/ResultCard";
 import "../lib/font-awesome/css/style.css";
-//import IconButton from '@mui/material/IconButton';
-//import SearchIcon from '@mui/icons-material/Search';
 import SearchBar from "material-ui-search-bar";
 import InfiniteScroll from "react-infinite-scroll-component";
 const Search = () => {
