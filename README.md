@@ -14,7 +14,9 @@ to display it in the App with the information of the beer!
 
 # The React
 Using the plataform of react I build some backgorund and Front-End to show information about beers, using an API.
-The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet, try changing their code and see how it affects the result.
+The React homepage contains a few small React examples with a live editor. Even if you don’t know anything about React yet
+
+React components implement a render() method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
 
 
 ## Hooks for get the Data of the API that display the beer
