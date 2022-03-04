@@ -27,6 +27,7 @@ We’ll discuss this more in Using the Effect Hook.
 ## Technologies 
 * JavaScript
 * React
+* Hooks
 * Material UI
 * HTML & CSS
 
