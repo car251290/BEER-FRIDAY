@@ -8,7 +8,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
-//useEffect to fetch the data
+//useEffect fetch the data
   useEffect(() => {
     fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=60`)
       .then((res) => res.json())
