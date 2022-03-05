@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../context/GlobalState";
-import { ItemCard } from "./ItemCard";
+import { GlobalContext } from "../../context/GlobalState";
+import { ItemCard } from "../ItemCard/ItemCard";
 
 const Favorite = () => {
   const { favourite } = useContext(GlobalContext);
