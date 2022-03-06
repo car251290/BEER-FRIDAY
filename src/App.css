@@ -22,7 +22,7 @@ body {
 
 @media (min-width: 750px) {
   .container {
-    width: 750px;
+    width: 800px;
   }
 }
 
@@ -148,7 +148,7 @@ header .nav-links li:last-child {
 
 .result-card {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-color:#EC9D00;
 }
 
@@ -212,8 +212,8 @@ header .nav-links li:last-child {
 .movie-page .heading {
   color: var(--primary);
   margin: 0;
-}
-
+} 
+/* in the favorite display*/
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -227,7 +227,7 @@ header .nav-links li:last-child {
 }
 
 .movie-card {
-  width: 100%;
+  width: 110%;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
@@ -273,7 +273,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn {
-  color: #1258db;
+  color: #9ca0a8;
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
@@ -292,4 +292,5 @@ header .nav-links li:last-child {
   font-size: 3rem;
   text-align: center;
 }
+
 
