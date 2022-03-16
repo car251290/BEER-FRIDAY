@@ -18,6 +18,8 @@ The React homepage contains a few small React examples with a live editor. Even 
 
 React components implement a render() method that takes input data and returns what to display. This example uses an XML-like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
 
+API Reference
+This documentation section is useful when you want to learn more details about a particular React API. For example, React.Component API reference can provide you with details on how setState() works, and what different lifecycle methods are useful for.
 
 ## Hooks for get the Data of the API that display the beer
 
