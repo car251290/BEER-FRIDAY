@@ -4,14 +4,10 @@ import { GlobalContext } from "../../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
 import { Card,CardContent,Typography,CardMedia,CardActions,Box} from '@material-ui/core';
 import { Scrollbar } from "react-scrollbars-custom";
-import Collapse from 'react-bootstrap/Collapse'
-import Button from 'react-bootstrap/Button'
-import useStyles from './style';
 
 export const ItemCard = ({ beer }) => {
   const { removeFromfavourite } = useContext(GlobalContext);
-  const [open, setOpen] = useState(false);
-  const classes = useStyles();
+ 
   return (
    
     <Card display="inline-block"  sx={{ maxWidth: 300 }}  style={{backgroundColor: "white"}} className="result-card">
