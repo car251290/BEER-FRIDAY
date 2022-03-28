@@ -8,7 +8,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [page, setPage] = useState(1);
-//useEffect fetch the data
+//useEffect to fetch the data
   useEffect(() => {
     fetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=60`)
       .then((res) => res.json())
@@ -20,11 +20,13 @@ const Search = () => {
         }
       });
   }, [page]);
+  //for update the request of the callback!!
 const onChange = useCallback((e) => {
     e.preventDefault();
 
     setQuery(e.target.value);
   },[]);
+
 // for get the beer data of the search
   const handleClick = () => {
     fetch(`https://api.punkapi.com/v2/beers?beer_name=${query}`)
@@ -44,18 +46,17 @@ const onChange = useCallback((e) => {
   return (
     <div>
       <div className="input-wrapper">
+        
          <SearchBar
           type="text"
            value={query}
-           onChange={ () => console.log(onChange)}
+           onChange={handleClick}
            style={{
             margin: '0 auto',
             maxWidth: 800,
           }}
           />
         <div>
-          
-
         </div>
       </div>
       <InfiniteScroll dataLength={results.length} next={next} hasMore={true}>
@@ -78,4 +79,14 @@ const onChange = useCallback((e) => {
     </div>
   );
 };
+
+//<button
+///            type="button"
+ //           onClick={handleClick}
+ //           className="btn btn-success"
+ //         > 
+ //           <span id="btn-success" className="btn4">
+ //             Search for a beer 
+ //           </span>
+ //         </button>
 export default Search;
