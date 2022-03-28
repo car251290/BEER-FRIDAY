@@ -5,17 +5,13 @@ import "../lib/font-awesome/css/style.css";
 import StarsIcon from "@material-ui/icons/Stars";
 import { Card,CardActions,CardContent, CardMedia, Typography,Box} from '@material-ui/core';
 import { Scrollbar } from "react-scrollbars-custom";
-import Collapse from 'react-bootstrap/Collapse'
-import Button from 'react-bootstrap/Button'
-import useStyles from './style';
 
 export const ResultCard = ({ beer }) => {
   const [colorClass, setColorClass] = useState("");
   const { addItemToFavouriteList, favourite } = useContext(GlobalContext);
   const storedItemWatched = favourite.find((o) => o.id === beer.id);
   const watchedDisabled = storedItemWatched ? true : false;
-  //const [open, setOpen] = useState(false);
-  const classes = useStyles();
+
   return (
     <Card display="inline-block" sx={{ maxWidth: 300 }}  style={{backgroundColor: "white"}} className="result-card">
       <Link to={`${beer.id}`}></Link>
