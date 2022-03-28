@@ -54,15 +54,7 @@ const onChange = useCallback((e) => {
           }}
           />
         <div>
-          <button
-            type="button"
-            onClick={handleClick}
-            className="btn btn-success"
-          > 
-            <span id="btn-success" className="btn4">
-              Search for a beer 
-            </span>
-          </button>
+          
 
         </div>
       </div>
