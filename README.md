@@ -31,6 +31,6 @@ We’ll discuss this more in Using the Effect Hook.
 * React
 * Hooks
 * Material UI
-* HTML & CSS
+* HTML & CSS styles
 
 
