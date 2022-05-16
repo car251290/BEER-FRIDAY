@@ -26,9 +26,12 @@ This documentation section is useful when you want to learn more details about a
 To solve this, Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data), rather than forcing a split based on lifecycle methods. You may also opt into managing the component’s local state with a reducer to make it more predictable.
 We’ll discuss this more in Using the Effect Hook.
 
+## NODE.JS
+
 ## Technologies 
 * JavaScript
 * React
+* node.js
 * Hooks
 * Material UI
 * HTML & CSS styles
