@@ -8,6 +8,8 @@ Pagination making a requests that return multiple items will be limited to 25 re
 
 https://punkapi.com/documentation/v2
 
+
+
 # Get a beer 
 Gets beers from the api, you can apply several filters using url paramaters, the available options are listed below.
 to display it in the App with the information of the beer!
@@ -33,10 +35,10 @@ La Documentación de Referencia de la API proporciona información detallada sob
 
 ## Technologies 
 * JavaScript
-* React
+* React.js
 * node.js
 * Hooks
 * Material UI
-* HTML & CSS styles
+* HTML & CSS
 
 
