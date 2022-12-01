@@ -14,7 +14,7 @@ export const GlobalContext = createContext(initialState);
 // provider components
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
-
+//Effect of the render of the action
   useEffect(() => {
     localStorage.setItem("favourite", JSON.stringify(state.favourite));
   }, [state]);
