@@ -39,7 +39,7 @@ const onChange = useCallback((e) => {
         }
       });
   };
-// for geeting to the favorite page of the beer
+// for geting to the favorite page of the beer
   const next = () => {
     setPage((page) => page + 1);
   };
@@ -80,13 +80,4 @@ const onChange = useCallback((e) => {
   );
 };
 
-//<button
-///            type="button"
- //           onClick={handleClick}
- //           className="btn btn-success"
- //         > 
- //           <span id="btn-success" className="btn4">
- //             Search for a beer 
- //           </span>
- //         </button>
 export default Search;
